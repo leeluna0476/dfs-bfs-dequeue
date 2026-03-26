@@ -83,7 +83,7 @@ char **dfs(char **map, int n, int m) {
 	printf("\n=====DFS=====\n");
 	while (!is_empty(&stk)) {
 		pos = delete_back(&stk);
-		printf("(%d, %d)\n", pos.y, pos.x);
+		printf("(%d, %d)\n", pos.x, pos.y);
 		if (map_copy[pos.y][pos.x] == DEST) {
 			break;
 		}
@@ -121,7 +121,7 @@ char **bfs(char **map, int n, int m) {
 	printf("\n=====BFS=====\n");
 	while (!is_empty(&q)) {
 		pos = delete_front(&q);
-		printf("(%d, %d)\n", pos.y, pos.x);
+		printf("(%d, %d)\n", pos.x, pos.y);
 		if (map_copy[pos.y][pos.x] == DEST) {
 			break;
 		}
