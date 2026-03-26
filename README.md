@@ -21,6 +21,7 @@ make re # make fclean -> make
   - 벽: `x`
   - 길: `o`
   - 도착 지점 `X`
+
 예시:
 ```
 7 7
