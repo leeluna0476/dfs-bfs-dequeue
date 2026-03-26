@@ -36,6 +36,7 @@ oooooxX
 ## 변경 가능한 옵션
 **탐색 방향 순서**
 - 기본 옵션: UP, DOWN, LEFT, RIGHT (왼쪽부터)
+
 ** 옵션 양식은 아래 양식을 지켜야 함.**
 ```bash
 make DIRECTION='"{ UP, DOWN, LEFT, RIGHT }"'
