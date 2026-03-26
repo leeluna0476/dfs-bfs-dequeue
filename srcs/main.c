@@ -16,21 +16,11 @@ int main(void) {
 
 	char **path_dfs = dfs(map, n, m);
 	printf("\n=====After DFS=====\n");
-	if (path_dfs == NULL) {
-		printf("No solution\n");
-	}
-	else {
-		print_map(path_dfs, n, m);
-	}
+	print_map(path_dfs, n, m);
 
 	char **path_bfs = bfs(map, n, m);
 	printf("\n=====After BFS=====\n");
-	if (path_bfs == NULL) {
-		printf("No solution\n");
-	}
-	else {
-		print_map(path_bfs, n, m);
-	}
+	print_map(path_bfs, n, m);
 
 	free_map(path_dfs, n);
 	free_map(path_bfs, n);
