@@ -78,12 +78,12 @@ char **dfs(char **map, int n, int m) {
 	if (start.x == -1) {
 		return map_copy;
 	}
-	pos_t pos = start;
-	add_back(&stk, pos);
+	
+	add_back(&stk, start);
 
 	printf("\n=====DFS=====\n");
 	while (!is_empty(&stk)) {
-		pos = delete_back(&stk);
+		pos_t pos = delete_back(&stk);
 		printf("(%d, %d)\n", pos.x, pos.y);
 		if (map_copy[pos.y][pos.x] == DEST) {
 			break;
@@ -118,12 +118,11 @@ char **bfs(char **map, int n, int m) {
 		return map_copy;
 	}
 
-	pos_t pos = start;
-	add_back(&q, pos);
+	add_back(&q, start);
 
 	printf("\n=====BFS=====\n");
 	while (!is_empty(&q)) {
-		pos = delete_front(&q);
+		pos_t pos = delete_front(&q);
 		printf("(%d, %d)\n", pos.x, pos.y);
 		if (map_copy[pos.y][pos.x] == DEST) {
 			break;
