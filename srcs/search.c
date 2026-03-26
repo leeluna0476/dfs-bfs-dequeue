@@ -75,10 +75,11 @@ char **dfs(char **map, int n, int m) {
 
 	int diff[4][2] = DIRECTION;
 	pos_t start = search_starting_point(map_copy, n, m);
-	pos_t pos = start;
-	if (pos.x != -1) {
-		add_back(&stk, pos);
+	if (start.x == -1) {
+		return map_copy;
 	}
+	pos_t pos = start;
+	add_back(&stk, pos);
 
 	printf("\n=====DFS=====\n");
 	while (!is_empty(&stk)) {
@@ -113,10 +114,12 @@ char **bfs(char **map, int n, int m) {
 
 	int diff[4][2] = DIRECTION;
 	pos_t start = search_starting_point(map_copy, n, m);
-	pos_t pos = start;
-	if (pos.x != -1) {
-		add_back(&q, pos);
+	if (start.x == -1) {
+		return map_copy;
 	}
+
+	pos_t pos = start;
+	add_back(&q, pos);
 
 	printf("\n=====BFS=====\n");
 	while (!is_empty(&q)) {
